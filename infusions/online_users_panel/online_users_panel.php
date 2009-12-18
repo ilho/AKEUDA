@@ -1,0 +1,59 @@
+<?php
+/*-------------------------------------------------------+
+| PHP-Fusion Content Management System
+| Copyright © 2002 - 2007 Nick Jones
+| http://www.php-fusion.co.uk/
++--------------------------------------------------------+
+| Filename: online_users_panel.php
+| Author: Nick Jones (Digitanium)
++--------------------------------------------------------+
+| This program is released as free software under the
+| Affero GPL license. You can redistribute it and/or
+| modify it under the terms of this license which you
+| can read by viewing the included agpl.txt or online
+| at www.gnu.org/licenses/agpl.html. Removal of this
+| copyright header is strictly prohibited without
+| written permission from the original author(s).
++--------------------------------------------------------*/
+if (!defined("IN_FUSION")) { die("Access Denied"); }
+	
+$result = dbquery("SELECT * FROM ".DB_ONLINE." WHERE online_user=".($userdata['user_level'] != 0 ? "'".$userdata['user_id']."'" : "'0' AND online_ip='".USER_IP."'"));
+if (dbrows($result)) {
+	$result = dbquery("UPDATE ".DB_ONLINE." SET online_lastactive='".time()."' WHERE online_user=".($userdata['user_level'] != 0 ? "'".$userdata['user_id']."'" : "'0' AND online_ip='".USER_IP."'")."");
+} else {
+	$result = dbquery("INSERT INTO ".DB_ONLINE." (online_user, online_ip, online_lastactive) VALUES ('".($userdata['user_level'] != 0 ? $userdata['user_id'] : "0")."', '".USER_IP."', '".time()."')");
+}
+$result = dbquery("DELETE FROM ".DB_ONLINE." WHERE online_lastactive<".(time()-60)."");
+
+openside($locale['global_010']);
+$result = dbquery(
+	"SELECT ton.*, tu.user_id,user_name FROM ".DB_ONLINE." ton
+	LEFT JOIN ".DB_USERS." tu ON ton.online_user=tu.user_id"
+);
+$guests = 0; $members = array();
+while ($data = dbarray($result)) {
+	if ($data['online_user'] == "0") {
+		$guests++;
+	} else {
+		array_push($members, array($data['user_id'], $data['user_name']));
+	}
+}
+echo THEME_BULLET." ".$locale['global_011'].": ".$guests."<br /><br />\n";
+echo THEME_BULLET." ".$locale['global_012'].": ".count($members)."<br />\n";
+if (count($members)) {
+	$i = 1;
+	while (list($key, $member) = each($members)) {
+		echo "<a href='".BASEDIR."profile.php?lookup=".$member[0]."' class='side'>".$member[1]."</a>";
+		if ($i != count($members)) { echo ",\n"; } else { echo "<br />\n"; }
+		$i++;
+	}
+}
+echo "<br />\n".THEME_BULLET." ".$locale['global_014'].": ".number_format(dbcount("(user_id)", DB_USERS, "user_status<='1'"))."<br />\n";
+if (iADMIN && checkrights("M") && $settings['admin_activation'] == "1") {
+	echo THEME_BULLET." <a href='".ADMIN."members.php".$aidlink."&amp;status=2' class='side'>".$locale['global_015']."</a>";
+	echo ": ".dbcount("(user_id)", DB_USERS, "user_status='2'")."<br />\n";
+}
+$data = dbarray(dbquery("SELECT user_id,user_name FROM ".DB_USERS." WHERE user_status='0' ORDER BY user_joined DESC LIMIT 0,1"));
+echo THEME_BULLET." ".$locale['global_016'].": <a href='".BASEDIR."profile.php?lookup=".$data['user_id']."' class='side'>".$data['user_name']."</a>\n";
+closeside();
+?>

@@ -1,0 +1,398 @@
+a {
+	color : #356481;
+	text-decoration : none;
+}
+
+a:hover {
+	color : #356481;
+	text-decoration : underline;
+}
+
+a.side {
+	color : #356481;
+	text-decoration : none;
+}
+
+a:hover.side {
+	color : #356481;
+	text-decoration : underline;
+}
+
+a.white {
+	color : #ccc;
+	text-decoration : none;
+}
+
+a:hover.white {
+	color : #ccc;
+	text-decoration : underline;
+}
+
+body {
+	color : #000;
+	background : #f1f2f4;
+	font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 12px;
+	margin : 10px;
+}
+
+form {
+	margin : 0px;
+}
+
+hr {
+	height : 2px;
+	border-bottom : 1px solid #fff;
+	border-top : 1px solid #c6c7c9;
+}
+
+hr.side-hr {
+	height : 2px;
+	border-bottom : 1px solid #d4dcdf;
+	border-top : 1px solid #b4bcbf;
+}
+
+td {
+	font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 11px;
+}
+
+pre {
+	font-family : Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 11px;
+}
+
+.alt {
+	color : #555;
+}
+
+.white-header {
+	font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 11px;
+	color : #000;
+	background-color : #f1f2f4;
+	padding : 4px;
+}
+
+.white-header ul{
+	margin: 0;
+	padding: 0;
+}
+
+.white-header ul li{
+	display: inline;
+}
+
+.white-header ul li.first-link .bullet{
+	display: none;
+}
+
+.full-header {
+	font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 11px;
+	color : #000;
+	background-color : #c4cccf;
+	border : 1px solid #000;
+	padding : 5px;
+}
+
+.admin-message {
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	font-size : 11px;
+	text-align : center;
+	color : #555;
+	background-color : #f6f6f6;
+	border : 1px solid #e1e1e1;
+	padding : 3px 4px 5px 4px;
+	margin-bottom : 5px;
+}
+
+.button {
+	font-family : "trebuchet ms", Tahoma, Arial, Verdana, Sans-Serif;
+	font-size : 11px;
+	color : #000;
+	background-color : #ddd;
+	height : 20px;
+	border : 1px solid #617d8f;
+	margin-top : 2px;
+}
+
+.bbcode {
+	font-family : "trebuchet ms", Tahoma, Arial, Verdana, Sans-Serif;
+	font-size : 11px;
+	color : #000;
+	background-color : #ddd;
+	border : 1px solid #617d8f;
+	margin-top : 2px;
+}
+
+.textbox {
+	font-family : "trebuchet ms", Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 11px;
+	color : #000;
+	background-color : #fff;
+	border : 1px solid #617d8f;
+}
+
+.main-body {
+	font-size : 11px;
+	color : #000;
+	background-color : #f1f2f4;
+	padding : 4px 4px 5px 4px;
+}
+
+.side-body {
+	font-size : 11px;
+	color : #516d7f;
+	background-color : #c4cccf;
+	padding : 4px;
+}
+
+#main-bg {
+	color : #000;
+	background-color : #f1f2f4;
+}
+
+* html #main-bg{
+	width: 600px;
+	height: 1%;	
+}
+
+.side-both #main-bg {margin: 0 182px;}
+.side-left #main-bg {margin-left: 182px;}
+.side-right #main-bg {margin-right: 182px;}
+.side-left #side-border-right {display:none;}
+.side-right #side-border-left {display:none;}
+
+.border {
+	border : 1px solid #000;
+	margin-bottom : 5px;
+}
+
+#side-border-left {
+	width: 170px;
+	float: left;
+	padding : 0px 10px 0px 0px;
+}
+
+#side-border-right {
+	width: 170px;
+	float: right;
+	padding : 0px 0px 0px 10px;
+}
+
+.news-category {
+	border: 0;
+	margin: 3px 5px 0 0;
+	float: left;
+}
+
+.news-footer {
+	text-align: center;
+	font-size : 10px;
+	color : #555;
+	background-color : #f1f2f4;
+	padding : 3px 4px 4px 4px;
+}
+
+.barmain {
+	font-family : Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 10px;
+	color : #aaa;
+	padding : 4px;
+}
+
+.capmain {
+	font-family : Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 11px;
+	font-weight : bold;
+	color : #415d6f;
+	background-color : #c4cccf;
+	padding : 2px 4px 4px;
+}
+
+.scapmain {
+	font-family : Verdana, Tahoma, Arial, Sans-Serif;
+	font-size : 11px;
+	font-weight : bold;
+	color : #415d6f;
+	background-color : #c4cccf;
+	padding : 4px 4px 1px;
+}
+
+.tbl-border {
+	border : 1px solid #d1d2d4;
+}
+
+.tbl {
+	font-size : 11px;
+	padding : 4px;
+}
+
+.tbl1 {
+	font-size : 11px;
+	color : #000;
+	background-color : #f1f2f4;
+	padding : 4px;
+}
+
+.tbl2 {
+	font-size : 11px;
+	color : #000;
+	background-color : #e1e2e4;
+	padding : 4px;
+}
+
+.forum-caption {
+	font-size : 11px;
+	font-weight : bold;
+	color : #415d6f;
+	background-color : #c4cccf;
+	padding : 2px 4px 3px;
+}
+
+.quote {
+	color : #000;
+	background-color : #fff;
+	padding : 2px;
+	margin : 0 20px;
+	border : 1px solid #617d8f;
+}
+
+.poll {
+	height : 12px;
+	border : 1px solid #000;
+}
+
+.comment-name {
+	font-weight : bold;
+	color : #bbb;
+}
+
+.shoutboxname {
+	font-weight : bold;
+	color : #ccc;
+	background-color : #c4cccf;
+}
+
+.shoutbox {
+	color : #415d8f;
+	background-color : #c4cccf;
+}
+
+.shoutboxdate {
+	font-size : 9px;
+	color : #213d6f;
+	background-color : #c4cccf;
+}
+
+.small {
+	font-size : 11px;
+	font-weight : normal;
+}
+
+.small2 {
+	font-size : 11px;
+	font-weight : normal;
+	color : #555;
+}
+
+.side-small {
+	font-size : 11px;
+	color : #516d7f;
+	background-color : #c4cccf;
+}
+
+.side-label {
+	color : #516d7f;
+	background-color : #b6bec2;
+	padding : 2px;
+}
+
+#navigation h2 {
+	font-size: 10px;
+	color : #516d7f;
+	background-color: #b6bec2;
+	margin: 0;
+	padding: 4px;
+}
+	
+#navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+* html #navigation ul li{
+   height: 1%;
+}
+
+#navigation a {
+	display: block;
+	color: #356481;
+	background-color: #c4cccf;
+	padding: 2px;
+	text-decoration : none;
+}
+
+#navigation a:hover {
+	color: #f1f2f4;
+	background-color: #356481;
+}
+
+/* Page Navigation */
+
+.pagenav {
+	padding: 0.4em;
+}
+
+.pagenav span {
+	color: #516d7f;
+	background-color: #c4cccf;
+	border: 1px solid #e1e1e1;
+	padding: 0.2em 0.4em 0.2em 0.4em;
+	margin: 0.2em;
+}
+
+.pagenav a {
+	color: #356481;
+	background-color: #f1f2f4;
+	border: 1px solid #d1d2d4;
+	padding: 0.2em 0.4em 0.2em 0.4em;
+	margin: 0.2em;
+	text-decoration: none;
+}
+
+.pagenav a:hover {
+	color: #f1f2f4;
+	background-color: #356481;
+	margin: 0.2em;
+	text-decoration: none;
+}
+
+/*Helpers*/
+.center {margin: 0 auto;}
+.content_center {text-align: center;}
+.flleft {float: left !important;}
+.flright {float: right !important;}
+.clear {clear: both;}
+
+
+/*IE Fixes*/
+* html #main-bg {
+	height: 1%;
+	width: auto;
+}
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+/* Hide from IE Mac \*/
+.clearfix {display:block;}
+/* End hide from IE Mac */
+.floatfix {overflow:hidden;}
+* html .floatfix {width:100%;}
+.center, *[align="center"] {margin: 0 auto;}
